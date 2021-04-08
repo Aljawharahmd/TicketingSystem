@@ -1,0 +1,1049 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.API\\Ticketing.API.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Tecketing.Storage\\Ticketing.Storage.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Tecketing.Storage\\Ticketing.Storage.csproj",
+        "projectName": "Ticketing.Storage",
+        "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Tecketing.Storage\\Ticketing.Storage.csproj",
+        "packagesPath": "C:\\Users\\amd-5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Tecketing.Storage\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\amd-5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Analyzers": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.API.Proxies\\Ticketing.API.Proxies.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.API.Proxies\\Ticketing.API.Proxies.csproj",
+        "projectName": "Ticketing.API.Proxies",
+        "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.API.Proxies\\Ticketing.API.Proxies.csproj",
+        "packagesPath": "C:\\Users\\amd-5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.API.Proxies\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\amd-5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Data.ActionModels\\Ticketing.Data.ActionModels.csproj": {
+                "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Data.ActionModels\\Ticketing.Data.ActionModels.csproj"
+              },
+              "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Security.Authentication\\Ticketing.Security.Authentication.csproj": {
+                "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Security.Authentication\\Ticketing.Security.Authentication.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Refit.HttpClientFactory": {
+              "target": "Package",
+              "version": "[5.1.67, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.API\\Ticketing.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.API\\Ticketing.API.csproj",
+        "projectName": "Ticketing.API",
+        "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.API\\Ticketing.API.csproj",
+        "packagesPath": "C:\\Users\\amd-5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\amd-5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Tecketing.Storage\\Ticketing.Storage.csproj": {
+                "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Tecketing.Storage\\Ticketing.Storage.csproj"
+              },
+              "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.API.Proxies\\Ticketing.API.Proxies.csproj": {
+                "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.API.Proxies\\Ticketing.API.Proxies.csproj"
+              },
+              "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Application\\Ticketing.Application.csproj": {
+                "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Application\\Ticketing.Application.csproj"
+              },
+              "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Data.ActionModels\\Ticketing.Data.ActionModels.csproj": {
+                "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Data.ActionModels\\Ticketing.Data.ActionModels.csproj"
+              },
+              "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Integration\\Ticketing.Integration.csproj": {
+                "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Integration\\Ticketing.Integration.csproj"
+              },
+              "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Logging\\Ticketing.Logging.csproj": {
+                "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Logging\\Ticketing.Logging.csproj"
+              },
+              "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Persistence\\Ticketing.Persistence.csproj": {
+                "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Persistence\\Ticketing.Persistence.csproj"
+              },
+              "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Security.Authentication\\Ticketing.Security.Authentication.csproj": {
+                "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Security.Authentication\\Ticketing.Security.Authentication.csproj"
+              },
+              "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Trace\\Ticketing.Trace.csproj": {
+                "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Trace\\Ticketing.Trace.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "AspNetCore.HealthChecks.MySql": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "AspNetCore.HealthChecks.UI": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "AspNetCore.HealthChecks.UI.Client": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.AspNetCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.Extensions.Diagnostics.HealthChecks": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "MySql.Data.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.21, )"
+            },
+            "NSwag.AspNetCore": {
+              "target": "Package",
+              "version": "[13.7.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
+            "Serilog.Enrichers.Environment": {
+              "target": "Package",
+              "version": "[2.1.3, )"
+            },
+            "Serilog.Enrichers.Process": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
+            "Serilog.Enrichers.Thread": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Serilog.Settings.Configuration": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.7.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Application\\Ticketing.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Application\\Ticketing.Application.csproj",
+        "projectName": "Ticketing.Application",
+        "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Application\\Ticketing.Application.csproj",
+        "packagesPath": "C:\\Users\\amd-5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\amd-5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Tecketing.Storage\\Ticketing.Storage.csproj": {
+                "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Tecketing.Storage\\Ticketing.Storage.csproj"
+              },
+              "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Data.ActionModels\\Ticketing.Data.ActionModels.csproj": {
+                "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Data.ActionModels\\Ticketing.Data.ActionModels.csproj"
+              },
+              "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Persistence\\Ticketing.Persistence.csproj": {
+                "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Persistence\\Ticketing.Persistence.csproj"
+              },
+              "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Protection\\Ticketing.Protection.csproj": {
+                "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Protection\\Ticketing.Protection.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Data.ActionModels\\Ticketing.Data.ActionModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Data.ActionModels\\Ticketing.Data.ActionModels.csproj",
+        "projectName": "Ticketing.Data.ActionModels",
+        "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Data.ActionModels\\Ticketing.Data.ActionModels.csproj",
+        "packagesPath": "C:\\Users\\amd-5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Data.ActionModels\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\amd-5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Tecketing.Storage\\Ticketing.Storage.csproj": {
+                "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Tecketing.Storage\\Ticketing.Storage.csproj"
+              },
+              "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Data\\Ticketing.Data.csproj": {
+                "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Data\\Ticketing.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Data\\Ticketing.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Data\\Ticketing.Data.csproj",
+        "projectName": "Ticketing.Data",
+        "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Data\\Ticketing.Data.csproj",
+        "packagesPath": "C:\\Users\\amd-5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\amd-5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Integration\\Ticketing.Integration.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Integration\\Ticketing.Integration.csproj",
+        "projectName": "Ticketing.Integration",
+        "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Integration\\Ticketing.Integration.csproj",
+        "packagesPath": "C:\\Users\\amd-5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Integration\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\amd-5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Notification\\Ticketing.Notification.csproj": {
+                "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Notification\\Ticketing.Notification.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Refit.HttpClientFactory": {
+              "target": "Package",
+              "version": "[5.1.67, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Logging\\Ticketing.Logging.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Logging\\Ticketing.Logging.csproj",
+        "projectName": "Ticketing.Logging",
+        "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Logging\\Ticketing.Logging.csproj",
+        "packagesPath": "C:\\Users\\amd-5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Logging\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\amd-5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Trace\\Ticketing.Trace.csproj": {
+                "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Trace\\Ticketing.Trace.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Notification\\Ticketing.Notification.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Notification\\Ticketing.Notification.csproj",
+        "projectName": "Ticketing.Notification",
+        "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Notification\\Ticketing.Notification.csproj",
+        "packagesPath": "C:\\Users\\amd-5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Notification\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\amd-5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Refit.HttpClientFactory": {
+              "target": "Package",
+              "version": "[5.1.67, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Persistence\\Ticketing.Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Persistence\\Ticketing.Persistence.csproj",
+        "projectName": "Ticketing.Persistence",
+        "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Persistence\\Ticketing.Persistence.csproj",
+        "packagesPath": "C:\\Users\\amd-5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Persistence\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\amd-5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Data\\Ticketing.Data.csproj": {
+                "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Data\\Ticketing.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "MySql.Data.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.21, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Protection\\Ticketing.Protection.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Protection\\Ticketing.Protection.csproj",
+        "projectName": "Ticketing.Protection",
+        "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Protection\\Ticketing.Protection.csproj",
+        "packagesPath": "C:\\Users\\amd-5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Protection\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\amd-5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[5.0.0-preview.8.20407.11, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "System.Runtime.Extensions": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Security.Authentication\\Ticketing.Security.Authentication.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Security.Authentication\\Ticketing.Security.Authentication.csproj",
+        "projectName": "Ticketing.Security.Authentication",
+        "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Security.Authentication\\Ticketing.Security.Authentication.csproj",
+        "packagesPath": "C:\\Users\\amd-5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Security.Authentication\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\amd-5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Application\\Ticketing.Application.csproj": {
+                "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Application\\Ticketing.Application.csproj"
+              },
+              "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Data.ActionModels\\Ticketing.Data.ActionModels.csproj": {
+                "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Data.ActionModels\\Ticketing.Data.ActionModels.csproj"
+              },
+              "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Persistence\\Ticketing.Persistence.csproj": {
+                "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Persistence\\Ticketing.Persistence.csproj"
+              },
+              "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Trace\\Ticketing.Trace.csproj": {
+                "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Trace\\Ticketing.Trace.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.7.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Trace\\Ticketing.Trace.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Trace\\Ticketing.Trace.csproj",
+        "projectName": "Ticketing.Trace",
+        "projectPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Trace\\Ticketing.Trace.csproj",
+        "packagesPath": "C:\\Users\\amd-5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amd-5\\Dropbox\\TicketingSystem\\Ticketing.Trace\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\amd-5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

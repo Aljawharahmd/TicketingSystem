@@ -1,0 +1,9 @@
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Tecketing.Storage\bin\Release\netcoreapp3.1\Ticketing.Storage.deps.json
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Tecketing.Storage\bin\Release\netcoreapp3.1\Ticketing.Storage.dll
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Tecketing.Storage\bin\Release\netcoreapp3.1\Ticketing.Storage.pdb
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Tecketing.Storage\obj\Release\netcoreapp3.1\Ticketing.Storage.AssemblyInfoInputs.cache
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Tecketing.Storage\obj\Release\netcoreapp3.1\Ticketing.Storage.AssemblyInfo.cs
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Tecketing.Storage\obj\Release\netcoreapp3.1\Ticketing.Storage.csproj.CoreCompileInputs.cache
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Tecketing.Storage\obj\Release\netcoreapp3.1\Ticketing.Storage.dll
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Tecketing.Storage\obj\Release\netcoreapp3.1\Ticketing.Storage.pdb
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Tecketing.Storage\obj\Release\netcoreapp3.1\Ticketing.Storage.csprojAssemblyReference.cache

@@ -1,0 +1,9 @@
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Data\bin\Release\netcoreapp3.1\Ticketing.Data.deps.json
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Data\bin\Release\netcoreapp3.1\Ticketing.Data.dll
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Data\bin\Release\netcoreapp3.1\Ticketing.Data.pdb
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Data\obj\Release\netcoreapp3.1\Ticketing.Data.AssemblyInfoInputs.cache
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Data\obj\Release\netcoreapp3.1\Ticketing.Data.AssemblyInfo.cs
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Data\obj\Release\netcoreapp3.1\Ticketing.Data.csproj.CoreCompileInputs.cache
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Data\obj\Release\netcoreapp3.1\Ticketing.Data.dll
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Data\obj\Release\netcoreapp3.1\Ticketing.Data.pdb
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Data\obj\Release\netcoreapp3.1\Ticketing.Data.csprojAssemblyReference.cache

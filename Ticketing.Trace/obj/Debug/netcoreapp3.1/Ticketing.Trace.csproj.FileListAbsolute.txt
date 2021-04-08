@@ -1,0 +1,9 @@
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Trace\bin\Debug\netcoreapp3.1\Ticketing.Trace.deps.json
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Trace\bin\Debug\netcoreapp3.1\Ticketing.Trace.dll
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Trace\bin\Debug\netcoreapp3.1\Ticketing.Trace.pdb
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Trace\obj\Debug\netcoreapp3.1\Ticketing.Trace.csprojAssemblyReference.cache
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Trace\obj\Debug\netcoreapp3.1\Ticketing.Trace.AssemblyInfoInputs.cache
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Trace\obj\Debug\netcoreapp3.1\Ticketing.Trace.AssemblyInfo.cs
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Trace\obj\Debug\netcoreapp3.1\Ticketing.Trace.csproj.CoreCompileInputs.cache
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Trace\obj\Debug\netcoreapp3.1\Ticketing.Trace.dll
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Trace\obj\Debug\netcoreapp3.1\Ticketing.Trace.pdb

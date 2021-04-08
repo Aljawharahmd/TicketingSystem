@@ -1,0 +1,12 @@
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Logging\bin\Debug\netcoreapp3.1\Ticketing.Logging.deps.json
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Logging\bin\Debug\netcoreapp3.1\Ticketing.Logging.dll
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Logging\bin\Debug\netcoreapp3.1\Ticketing.Logging.pdb
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Logging\bin\Debug\netcoreapp3.1\Ticketing.Trace.dll
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Logging\bin\Debug\netcoreapp3.1\Ticketing.Trace.pdb
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Logging\obj\Debug\netcoreapp3.1\Ticketing.Logging.csprojAssemblyReference.cache
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Logging\obj\Debug\netcoreapp3.1\Ticketing.Logging.AssemblyInfoInputs.cache
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Logging\obj\Debug\netcoreapp3.1\Ticketing.Logging.AssemblyInfo.cs
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Logging\obj\Debug\netcoreapp3.1\Ticketing.Logging.csproj.CoreCompileInputs.cache
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Logging\obj\Debug\netcoreapp3.1\Ticketing.Logging.csproj.CopyComplete
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Logging\obj\Debug\netcoreapp3.1\Ticketing.Logging.dll
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Logging\obj\Debug\netcoreapp3.1\Ticketing.Logging.pdb

@@ -1,0 +1,10 @@
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Notification\bin\Debug\netcoreapp3.1\Ticketing.Notification.deps.json
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Notification\bin\Debug\netcoreapp3.1\Ticketing.Notification.dll
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Notification\bin\Debug\netcoreapp3.1\Ticketing.Notification.pdb
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Notification\obj\Debug\netcoreapp3.1\Ticketing.Notification.csprojAssemblyReference.cache
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Notification\obj\Debug\netcoreapp3.1\RefitStubs.g.cs
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Notification\obj\Debug\netcoreapp3.1\Ticketing.Notification.AssemblyInfoInputs.cache
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Notification\obj\Debug\netcoreapp3.1\Ticketing.Notification.AssemblyInfo.cs
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Notification\obj\Debug\netcoreapp3.1\Ticketing.Notification.csproj.CoreCompileInputs.cache
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Notification\obj\Debug\netcoreapp3.1\Ticketing.Notification.dll
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Notification\obj\Debug\netcoreapp3.1\Ticketing.Notification.pdb

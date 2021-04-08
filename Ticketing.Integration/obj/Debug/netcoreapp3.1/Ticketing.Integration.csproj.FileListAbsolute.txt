@@ -1,0 +1,13 @@
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Integration\bin\Debug\netcoreapp3.1\Ticketing.Integration.deps.json
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Integration\bin\Debug\netcoreapp3.1\Ticketing.Integration.dll
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Integration\bin\Debug\netcoreapp3.1\Ticketing.Integration.pdb
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Integration\bin\Debug\netcoreapp3.1\Ticketing.Notification.dll
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Integration\bin\Debug\netcoreapp3.1\Ticketing.Notification.pdb
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Integration\obj\Debug\netcoreapp3.1\Ticketing.Integration.csprojAssemblyReference.cache
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Integration\obj\Debug\netcoreapp3.1\RefitStubs.g.cs
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Integration\obj\Debug\netcoreapp3.1\Ticketing.Integration.AssemblyInfoInputs.cache
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Integration\obj\Debug\netcoreapp3.1\Ticketing.Integration.AssemblyInfo.cs
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Integration\obj\Debug\netcoreapp3.1\Ticketing.Integration.csproj.CoreCompileInputs.cache
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Integration\obj\Debug\netcoreapp3.1\Ticketing.Integration.csproj.CopyComplete
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Integration\obj\Debug\netcoreapp3.1\Ticketing.Integration.dll
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Integration\obj\Debug\netcoreapp3.1\Ticketing.Integration.pdb

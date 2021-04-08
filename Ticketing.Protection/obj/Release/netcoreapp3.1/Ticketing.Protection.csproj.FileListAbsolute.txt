@@ -1,0 +1,9 @@
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Protection\bin\Release\netcoreapp3.1\Ticketing.Protection.deps.json
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Protection\bin\Release\netcoreapp3.1\Ticketing.Protection.dll
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Protection\bin\Release\netcoreapp3.1\Ticketing.Protection.pdb
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Protection\obj\Release\netcoreapp3.1\Ticketing.Protection.csprojAssemblyReference.cache
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Protection\obj\Release\netcoreapp3.1\Ticketing.Protection.AssemblyInfoInputs.cache
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Protection\obj\Release\netcoreapp3.1\Ticketing.Protection.AssemblyInfo.cs
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Protection\obj\Release\netcoreapp3.1\Ticketing.Protection.csproj.CoreCompileInputs.cache
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Protection\obj\Release\netcoreapp3.1\Ticketing.Protection.dll
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Protection\obj\Release\netcoreapp3.1\Ticketing.Protection.pdb

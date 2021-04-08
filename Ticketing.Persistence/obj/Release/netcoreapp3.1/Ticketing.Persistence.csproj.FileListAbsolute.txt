@@ -1,0 +1,15 @@
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Persistence\bin\Release\netcoreapp3.1\Ticketing.Persistence.deps.json
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Persistence\bin\Release\netcoreapp3.1\Ticketing.Persistence.runtimeconfig.json
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Persistence\bin\Release\netcoreapp3.1\Ticketing.Persistence.runtimeconfig.dev.json
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Persistence\bin\Release\netcoreapp3.1\Ticketing.Persistence.dll
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Persistence\bin\Release\netcoreapp3.1\Ticketing.Persistence.pdb
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Persistence\bin\Release\netcoreapp3.1\Ticketing.Data.dll
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Persistence\bin\Release\netcoreapp3.1\Ticketing.Data.pdb
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Persistence\obj\Release\netcoreapp3.1\Ticketing.Persistence.csprojAssemblyReference.cache
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Persistence\obj\Release\netcoreapp3.1\Ticketing.Persistence.AssemblyInfoInputs.cache
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Persistence\obj\Release\netcoreapp3.1\Ticketing.Persistence.AssemblyInfo.cs
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Persistence\obj\Release\netcoreapp3.1\Ticketing.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Persistence\obj\Release\netcoreapp3.1\Ticketing.Persistence.csproj.CopyComplete
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Persistence\obj\Release\netcoreapp3.1\Ticketing.Persistence.dll
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Persistence\obj\Release\netcoreapp3.1\Ticketing.Persistence.pdb
+C:\Users\amd-5\Desktop\T2_Competition\TicketingSystem\Ticketing.Persistence\obj\Release\netcoreapp3.1\Ticketing.Persistence.genruntimeconfig.cache
