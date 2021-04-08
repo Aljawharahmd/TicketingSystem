@@ -1,0 +1,59 @@
+﻿@model TicketCreateViewParameters;
+
+@{
+    ViewData["Title"] = "New Ticket";
+    Layout = "Layout";
+}
+<body>
+    <div class="createTicketBg">
+        <div class="container-fluid">
+            <div class="row ">
+                <div class="col-1">
+                    <div class="pl-3 linkHover" style="padding-top: 55px ">
+                        <a asp-area="" asp-controller="Home" asp-action="Index">
+                            <i class="fas fa-arrow-circle-left txtDark" style="font-size: 40px;"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-5 mb-5 mt-5">
+                    @using (Html.BeginForm("Create", "Ticket", FormMethod.Post, new
+                    {
+                        enctype = "multipart/form-data"
+                    }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <form class="txtDark">
+                            <div id="" class="form-group justify-content-center">
+                                <div>
+                                    <h1>
+                                        <strong>New Ticket</strong>
+                                    </h1>
+                                </div>
+                            </div>
+                            <div class="form-group justify-content-center">
+                                <label>Subject</label>
+                                @Html.TextBoxFor(model => model.TicketCreateParameters.Subject, htmlAttributes: new {required = "true", placeholder = "Enter a subject for your issue", @class = "form-control col-12"})
+                            </div>
+                            <div class="form-group justify-content-center">
+                                <label>Product</label>
+                                @Html.DropDownListFor(model => model.TicketCreateParameters.ProductId,
+                                    new SelectList(Model.ProductViewResult, "Id", "Name"), new {required = "true", @class = "custom-select form-control col-12 mr-3"})
+                            </div>
+                            <div class="form-group justify-content-center">
+                                <label>Summary</label>
+                                @Html.TextAreaFor(model => model.TicketCreateParameters.Summary, htmlAttributes: new {required = "true", rows = "7", placeholder = "Description of your issue", minlength = "2", maxlength = "1000", @class = "form-control"})
+                            </div>
+                            <div class="form-group">
+                                <label>Attachment</label>
+                                <input type="file" name="Attachments" multiple="multiple"/>
+                            </div>
+                            <button type="submit" class="btn btn-dark mr-1" asp-controller="Ticket" asp-action="Create">Submit</button>
+                            <button type="reset" class="btn btn-dark">Clear</button>
+                        </form>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+

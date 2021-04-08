@@ -1,0 +1,82 @@
+﻿@model TicketCreateViewParameters
+@{
+    ViewData["Title"] = "My Ticket";
+    Layout = "Layout";
+}
+<body>
+    <div class="viewTicketBg">
+        <div class="container-fluid mt-5">
+            <div class="container-fluid mt-4">
+                <button class="btn btn-dark" data-toggle="collapse" href="#collapse" aria-expanded="false" aria-controls="collapse">
+                    <i class="fas fa-filter"></i> &nbsp; Filter
+                </button>
+                <button class="btn btn-dark ml-2" asp-controller="Ticket" asp-action="Create">
+                    <i class="fas fa-ticket-alt"></i> &nbsp; New Ticket
+                </button>
+                <br />
+                <div class="card collapse mt-3" id="collapse">
+                    <div class="row card-body cardNoHover" style="margin-bottom: -15px">
+                        <div class="col-3">
+                            <div class="input-group mb-3 col-12">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" id="ticketSearch" onkeyup="filterTicket()" placeholder="Ticket Number">
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="mb-3">
+                                <div class="">
+
+                                    <select id="productList" class="custom-select" onchange="filterProduct()">
+                                        @foreach (var product in Model.ProductViewResult)
+                                        {
+                                            <option>@product.Name</option>
+                                        }
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="jumbotron table-responsive">
+                <table class="table table-con" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Ticket Number</th>
+                            <th>Product</th>
+                            <th>Subject</th>
+                            <th>Status</th>
+                            <th>Create Date</th>
+                            <th>Last Modified</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var ticket in Model.Tickets)
+                        {
+                            <tr>
+                                <td>@Html.ActionLink($"{ticket.Id}", "View", new { Id = ticket.Id })</td>
+                                <td>@ticket.ProductName</td>
+                                <td>@ticket.Subject</td>
+                                <td>@ticket.Status</td>
+                                <td>@ticket.CreateDateTime</td>
+                                <td>@ticket.LastModifiedDateTime</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="~/js/filters.js"></script>
+    @section Scripts
+{
+
+    }
+</body>
+

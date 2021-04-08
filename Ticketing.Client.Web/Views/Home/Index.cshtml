@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Home";
+    Layout = "Layout";
+}
+<body>
+    <div class="jumbotronClientHome">
+        <div class="container mt-3">
+            <h1>
+                Welcome to
+                <span class="logo" style="font-size: 30pt; color: #263949">
+                    <span style="color: #f8ac59">TickIT</span>
+                </span>
+            </h1>
+            <p class="lead">Where you get the best support.</p>
+        </div>
+    </div>
+
+    <section class="content-section part" id="portfolio">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-1 ml-4"></div>
+                <div class="col-5 portfolio-item">
+                    <a asp-controller="Ticket" asp-action="Create">
+                        <span class="caption" id="newTicket">
+                            <span class="caption-content">
+                                <h1><strong>New Ticket</strong></h1>
+                                <p class="mb-0">Submit a ticket.</p>
+                            </span>
+                        </span>
+                        <img class="img-fluid" src="~/img/newTicket1.png">
+                    </a>
+                </div>
+                <div class="col-5 portfolio-item">
+                    <a asp-controller="Ticket" asp-action="Index">
+                        <span class="caption" id="myTickets">
+                            <span class="caption-content">
+                                <h1><strong>My Tickets</strong></h1>
+                                <p class="mb-0">View all of my tickets. </p>
+                            </span>
+                        </span>
+                        <img class="img-fluid" src="~/img/allTickets1.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+

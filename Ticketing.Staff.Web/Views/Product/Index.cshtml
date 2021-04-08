@@ -1,0 +1,141 @@
+﻿@using Ticketing.Data.Models
+@model ProductCreateViewParameters
+@{
+    ViewData["Title"] = "Products";
+    Layout = "ManagerLayout";
+}
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_content" class="productBG mb-1">
+            <div class="container-fluid">
+                <h1 class="mt-4"><strong>List of Products</strong></h1>
+                <br />
+                <div class="row">
+                    <div class="col-6">
+                        <div class="table-responsive">
+                            <table class="table table-con text-center" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Code</th>
+                                        <th>Name</th>
+                                        <th>Priority</th>
+                                        <th>Edit</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var product in Model.Products)
+                                    {
+                                        <tr>
+                                            <td>@product.Id</td>
+                                            <td>@product.Name</td>
+                                            <td>@product.TicketPriority</td>
+                                            <td>
+                                                <button type="button" class="btn btn-link" data-toggle="modal" data-target="#updateForm"><i class="fas fa-edit edit-fa"></i></button>
+                                            </td>
+                                            <td>
+                                                <a class="nav-link" href="Product/Delete/@product.Id">
+                                                    <i class="fas fa-times-circle deactivate-fa"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card" style="background-color: transparent;">
+                            <div class="card-body cardNoHover">
+                                @using (Html.BeginForm("Create", "Product", FormMethod.Post))
+                                {
+                                    @Html.AntiForgeryToken()
+
+                                    <div class="container-fluid">
+                                        <h4><strong>Add a new product</strong></h4>
+
+                                        <div class="form-group">
+                                            <table class="table-borderless">
+                                                <tr class="mb-1">
+                                                    <th>Product Name</th>
+                                                    <td>
+                                                        @Html.TextBoxFor(model => model.Product.Name, htmlAttributes: new {placeholder = "Product Name", @class = "form-control"})
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Product Priority &nbsp;</th>
+                                                    <td>
+                                                        @Html.DropDownListFor(model => model.Product.TicketPriority,
+                                                            new SelectList(Enum.GetValues(typeof(Ticketing.Data.Enums.TicketPriority)), "Select Priority"), new {@class = "custom-select"})
+                                                    </td>
+                                                    <td> <button type="submit" class="btn btn-dark ml-3" asp-controller="Product" asp-action="Create">Add</button></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <div class="modal fade" id="updateForm" role="dialog">
+                            <div class="modal-dialog modal-md">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Update product</h4>
+                                    </div>
+                                    @using (Html.BeginForm("Update", "Product", FormMethod.Post))
+                                    {
+                                        <div class="modal-body">
+
+                                            <div class="container-fluid">
+                                                <div class="form-group">
+                                                    <table class="table-borderless">
+                                                        <tr>
+                                                            <th>Product ID</th>
+                                                            <td>
+                                                                @Html.DropDownListFor(model => model.Id,
+                                                     new SelectList(Model.Products, "Id", "Name", "Select Product"), new { @class = "custom-select" })
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Priority</th>
+                                                            <td>
+                                                                @Html.DropDownListFor(model => model.Product.TicketPriority,
+                                                     new SelectList(Enum.GetValues(typeof(Ticketing.Data.Enums.TicketPriority)), "Select Priority"), new { @class = "custom-select" })
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Product Name &nbsp; &nbsp;</th>
+                                                            <td>
+                                                                @Html.TextBoxFor(model => model.Product.Name, htmlAttributes: new { placeholder = "New Name", @class = "form-control" })
+
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="submit" class="btn btn-dark mr-2" asp-controller="Product" asp-action="Update">Update</button>
+                                            <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function openForm() {
+        document.getElementById("updateForm").style.display = "block";
+    }
+
+    function closeForm() {
+        document.getElementById("updateForm").style.display = "none";
+    }
+</script>

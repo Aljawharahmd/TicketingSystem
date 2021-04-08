@@ -1,0 +1,42 @@
+﻿@model LoginParameters
+@{
+    ViewData["Title"] = "Login";
+    Layout = "Layout";
+}
+<body>
+    <div id="mainDiv" class="staffBG mt-4">
+        <section class="container-fluid">
+            <div class="row">
+                <div class="col-1">
+                </div>
+                <div class="col-4 lform mb-5">
+                    <div class="jumbotron pt-2">
+                        @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
+                            <form class="llform txtDark pl-5" method="post">
+                                <div id="login" class="form-group justify-content-center">
+                                    <div class="mt-4 mb-3"><h1>Staff Log In</h1></div>
+                                    <div class="form-group justify-content-center">
+                                        <label>Mobile Number</label>
+                                        <div id="" class="form-inline">
+                                            @Html.DropDownListFor(model => model.AreaCode,
+                                            new SelectList(new List<string> { "+966", "+962", "+971" }), new { @class = "custom-select form-control col-3 mr-2" })
+                                            @Html.TextBoxFor(model => model.MobileNumber, htmlAttributes: new { id = "mobileNumber", maxlength = "9", pattern = "[0-9]{9}", required = "true", @class = "form-control col-5" })
+                                            <small id="Mobilehelp" class="form-text text-muted">The Mobile Number you Registered with</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group linkColor">
+                                    <a asp-area="" asp-controller="Account" asp-action="Register">Not Registered?</a>
+                                </div>
+                                <button type="submit" class="btn btn-dark mr-1" asp-controller="Account" asp-action="Login">Log In</button>
+                                <button type="reset" class="btn btn-dark">Clear</button>
+                            </form>
+                        }
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>

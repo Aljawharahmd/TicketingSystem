@@ -1,0 +1,83 @@
+﻿@model StaffMemberUpdateViewParameters
+@{
+    ViewData["Title"] = "Profile";
+
+    if (TempData["Staff"] != null)
+        Layout = "StaffLayout";
+    else
+    Layout = "ManagerLayout";
+
+}
+<body>
+    <div id="layoutSidenav" class="mb-4">
+        <div id="layoutSidenav_content" class="profileBG">
+            <div class="container-fluid ">
+
+                <div class="row mt-5">
+                    <div class="col-1"></div>
+                    <div class="col-4">
+                        <h2 class="mt-4"><strong>Update Profile</strong></h2>
+                        <br />
+                        @using (Html.BeginForm("Profile", "Account", FormMethod.Post))
+                        {
+                            <form class="txtDark">
+                                <div class="form-group justify-content-center">
+                                    <label>Full Name</label>
+                                    <div class="form-inline">
+                                        @Html.TextBoxFor(model => model.FirstName, htmlAttributes: new { placeholder = "First Name", required = "true", @class = "form-control col-sm-4 mr-3" })
+                                        @Html.TextBoxFor(model => model.LastName, htmlAttributes: new { placeholder = "Last Name", required = "true", @class = "form-control col-sm-4" })
+
+                                    </div>
+                                </div>
+                                <div id="" class="form-group justify-content-center">
+                                    <label>Mobile Number</label>
+                                    <div class="form-inline">
+
+                                        @Html.DropDownListFor(model => model.AreaCode,
+                                            new SelectList(new List<string> { "+966", "+962", "+971" }), new { @class = "custom-select form-control col-3 mr-3" })
+                                        @Html.TextBoxFor(model => model.MobileNumber, htmlAttributes: new { id = "mobileNumber", placeholder = "", maxlength = "9", pattern = "[0-9]{9}", required = "true", @class = "form-control col-5" })
+                                        <small id="Mobilehelp" class="form-text text-muted">The Mobile Number you Registered with</small>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Email address</label>
+                                    @Html.TextBoxFor(model => model.Email, htmlAttributes: new { type = "email", required = "true", placeholder = "Enter your Email", @class = "form-control col-8" })
+                                </div>
+                                <div class="form-group">
+                                    <label>Address</label>
+                                    @Html.TextBoxFor(model => model.Address, htmlAttributes: new { @class = "form-control col-8" })
+                                </div>
+                                <div class="form-group justify-content-center">
+                                    <label>Date of Birth</label><br />
+                                    @Html.TextBoxFor(model => model.BirthDate, htmlAttributes: new { @type = "date", required = "true", @class = " col-8" })
+                                </div>
+                                @Html.HiddenFor(model => model.UserId)
+
+                                <button type="submit" class="btn btn-dark">Submit</button>
+                                <button type="reset" class="btn btn-dark">Clear</button>
+                            </form>
+                        }
+                    </div>
+                    <div class="col mt-1" style="border-left: solid 1px #e0e0e0;">
+                        <div class="card" style="border: none !important; background-color: rgba(255, 255, 255, 0)">
+                            <div class="card-body cardNoHover">
+                                <h2><strong>Profile Information</strong></h2>
+                                <br />
+                                <h5><strong>Name </strong></h5>
+                                <p>@Model.FirstName @Model.LastName</p>
+                                <h5><strong>Mobile Number </strong></h5>
+                                <p> @Model.AreaCode@Model.MobileNumber</p>
+                                <h5><strong>Email </strong></h5>
+                                <p>@Model.Email</p>
+                                <h5><strong>Date of Birth </strong></h5>
+                                <p>@Model.BirthDate</p>
+                                <h5><strong>Address:</strong></h5>
+                                <p>@Model.Address</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

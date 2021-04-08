@@ -1,0 +1,8 @@
+﻿@model FileParameters
+
+@{
+    ViewData["Title"] = "View File ";
+    Layout = null;
+
+}
+<img src="@String.Format("data:image/*;base64,{0}",Model.Image)" />

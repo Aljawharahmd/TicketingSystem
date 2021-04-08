@@ -1,0 +1,111 @@
+﻿@using Newtonsoft.Json
+
+@model ManagerDashboard
+@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "ManagerLayout";
+}
+<head>
+    <meta http-equiv="refresh" content="30" />
+</head>
+<body>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_content">
+            <div class="container-fluid">
+                <h1 class="mt-4"><strong>Dashboard</strong></h1>
+                <div class="container pt-5" style="text-align: center; vertical-align: middle;">
+
+                    @*      Counters      *@
+                    <div class="row">
+                        <div class="col">
+                            <div class="card text-dark bg-card mb-4" style=" background-color: #F8AC59;">
+                                <div class="card-body">
+                                    <h5 class="card-title"><strong>Open Tickets</strong></h5>
+                                    <p class="card-text">@Model.OpenTickets</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card text-dark bg-card mb-4" style="background-color: #a3e1d4;">
+                                <div class="card-body">
+                                    <h5 class="card-title"><strong>Closed Tickets</strong></h5>
+                                    <p class="card-text">@Model.ClosedTickets</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card text-dark bg-card mb-3" style="background-color: #80c1d7;">
+                                <div class="card-body">
+                                    <h5 class="card-title"><strong>All Clients</strong></h5>
+                                    <p class="card-text">@Model.AllClients</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card text-dark bg-card mb-3" style="max-width: 140rem;background-color: #80c1d7;">
+                                <div class="card-body">
+                                    <h5 class="card-title"><strong>Most Productive Staff</strong></h5>
+                                    <p class="card-text">
+                                        @Model.MostProductiveEmployee.Name<span class="card-text ml-2"><strong>With </strong>@Model.MostProductiveEmployee.Id</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card text-dark bg-card mb-3" style="max-width: 140rem;background-color: #F8AC59;">
+                                <div class="card-body">
+                                    <h5 class="card-title"><strong>Average Tickets Per Staff</strong></h5>
+                                    <p class="card-text">@Model.AverageTicketsPerStaff</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    @*      Charts      *@
+                    <div class="row ">
+                        <div class="col-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>Number of Tickets Per Product</h4>
+                                    <div id="piechart-TicketsPerProduct"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>Number of Tickets</h4>
+                                    <div id="piechart-NoOfTickets"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4 mb-5">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>Staff Productivity</h4>
+                                    <div id="productivity">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @section Scripts{
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript" src="~/js/dashboard.js"></script>
+        <script>
+            var numberOfTickets = @Html.Raw(JsonConvert.SerializeObject(Model.NumberOfTicketsPerProduct));
+            var numberOfTicketsStatus = @Html.Raw(JsonConvert.SerializeObject(Model.NumberOfTicketsStatus));
+            var numberOfTicketsPerStaff =  @Html.Raw(JsonConvert.SerializeObject(Model.NumberOfTicketsPerStaff));
+        </script>
+    }
+</body>

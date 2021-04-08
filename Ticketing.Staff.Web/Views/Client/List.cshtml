@@ -1,0 +1,252 @@
+﻿
+@model List<Ticketing.Data.ActionModels.Client.Results.ClientViewResult>
+@{
+    ViewData["Title"] = "Clients";
+    Layout = "ManagerLayout";
+}
+    <body>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_content">
+                <div class="container-fluid">
+                    <h1 class="mt-4"><strong>Clients</strong></h1>
+                    <br />
+                    <button class="btn btn-dark" data-toggle="collapse" href="#collapse" aria-expanded="false" aria-controls="collapse">
+                        <i class="fas fa-filter"></i> &nbsp; Filter
+                    </button>
+                    <br />
+                    <div class="card collapse mt-3" id="collapse">
+                        <div class="row card-body cardNoHover" style="margin-bottom: -20px">
+                            <div class="col-3">
+                                <div class="input-group col-12">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-search"></i>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="cidSearch" onkeyup="filterName()" placeholder="Client Name">
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="input-group col-12">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-search"></i>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="mobileSearch" onkeyup="filterMobile()" placeholder="Mobile Number">
+                                </div>
+                            </div>
+                            @*<div class="col-3">
+                                <div class="col-12">
+                                    <select id="userStatusList" class="custom-select" onchange="filterUserStatus()">
+                                        <option selected>Status</option>
+                                        <option value="1">Active</option>
+                                        <option value="2">Inactive</option>
+                                    </select>
+                                </div>
+                            </div>*@
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="table-responsive">
+                        <table class="table table-con" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Client Number</th>
+                                    <th>Client Name</th>
+                                    <th>No. Tickets</th>
+                                    <th>Mobile Number</th>
+                                    <th>Email</th>
+                                    <th>Status</th>
+                                    <th>Activate</th>
+                                    <th>Deactivate</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var client in Model)
+                                {
+                                <tr>
+                                    <td>@client.Id</td>
+                                    <td>@client.Name</td>
+                                    <td>@client.NumberOfTickets</td>
+                                    <td>@client.MobileNumber</td>
+                                    <td>@client.Email</td>
+                                    <td>@client.Status</td>
+                                    <td>
+                                        @if (@client.Status.ToString() == "Active")
+                                        {
+                                            <a class="nav-link">
+                                                <i class="fas fa-check-circle activate-disabled"></i>
+                                            </a>
+                                        }
+                                        else
+                                        {
+                                            <a class="nav-link" href="Activate/@client.Id">
+                                                <i class="fas fa-check-circle activate-fa"></i>
+                                            </a>
+                                        }
+
+                                    </td>
+                                    <td>
+                                        @if (@client.Status.ToString() == "Deactive")
+                                        {
+                                            <a class="nav-link">
+                                                <i class="fas fa-times-circle deactivate-disabled "></i>
+
+                                            </a>
+                                        }
+                                        else
+                                        {
+                                            <a class="nav-link" href="Deactivate/@client.Id">
+                                                <i class="fas fa-times-circle deactivate-fa "></i>
+
+                                            </a>
+                                        }
+
+                                    </td>
+                                </tr>
+
+                                }
+
+                              
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="~/js/filters.js"></script>
+        @section scripts
+{
+                <script type="text/javascript">
+
+                    function filterUserStatus() {
+                    var input, filter, table, tr, td, i;
+                    input = document.getElementById("userStatusList");
+                    filter = input.value.toUpperCase();
+                    table = document.getElementById("dataTable");
+                    tr = table.getElementsByTagName("tr");
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[5];
+                        if (td) {
+                            if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].style.display = "";
+                            }
+                            else if (filter === "STATUS") {
+                                tr[i].style.display = "";
+                            }
+                            else {
+                                tr[i].style.display = "none";
+                            }
+                        }
+                    }
+                }
+            @*var changedData;
+                function filterName() {
+                    // Declare variables
+                    var input, filter, table, tr, td, i, txtValue;
+                    input = document.getElementById("cidSearch");
+                    filter = input.value.toUpperCase();
+                    table = document.getElementById("dataTable");
+                    tr = table.getElementsByTagName("tr");
+
+                    // Loop through all table rows, and hide those who don't match the search query
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[0];
+                        if (td) {
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].style.display = "";
+                            } else {
+                                tr[i].style.display = "none";
+                            }
+                        }
+                    }
+                }
+
+                function filterMobile() {
+                    // Declare variables
+                    var input, filter, table, tr, td, i, txtValue;
+                    input = document.getElementById("mobileSearch");
+                    filter = input.value.toUpperCase();
+                    table = document.getElementById("dataTable");
+                    tr = table.getElementsByTagName("tr");
+
+                    // Loop through all table rows, and hide those who don't match the search query
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].style.display = "";
+                            } else {
+                                tr[i].style.display = "none";
+                            }
+                        }
+                    }
+                }
+
+
+            function addToChanges(id) {
+                changedData = id;
+
+            }
+
+            function saveChanges() {
+                $.ajax({
+                        url: "@Url.Action("Deactivate", "Ticket")",
+                        type: "POST",
+                    data: { id: changedData },
+                        datatype: "json",
+
+                    });
+            }
+            $(document).ready(function () {
+                $("#deactivate").click(function () {
+                    saveChanges();
+
+                });
+
+                $(document).ready(function () {
+                    $("#activate").click(function () {
+                        saveChanges();
+
+                    });
+
+                $('.changeable').on('click', function (e) {
+                    addToChanges($(this).attr('id'))
+                });
+        })
+
+
+
+
+
+
+function filterUserStatus() {
+    var input, filter, table, tr, td, i;
+    input = document.getElementById("userStatusList");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("dataTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[5];
+        if (td) {
+            if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            }
+            else if (filter === "Status") {
+                tr[i].style.display = "";
+            }
+            else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+}
+
+                *@
+                </script>
+        }
+    </body>

@@ -1,0 +1,219 @@
+﻿@model ListOfTicketsParameters
+@{
+    ViewData["Title"] = "Tickets";
+    Layout = "ManagerLayout";
+}
+<body>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_content">
+            <div class="container-fluid">
+                <h1 class="mt-4"><strong>Tickets</strong></h1>
+                <br />
+                <button class="btn btn-dark" data-toggle="collapse" href="#collapse" aria-expanded="false" aria-controls="collapse">
+                    <i class="fas fa-filter"></i> &nbsp; Filter
+                </button>
+                <div class="card collapse mt-3" id="collapse">
+                    <div class="row card-body cardNoHover" style="margin-bottom: -15px">
+                        <div class="input-group mb-4 col-3">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control" id="ticketSearch" onkeyup="filterTicket()" placeholder="Ticket Number">
+                        </div>
+                        <div class="input-group mb-4 col-3">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control" id="clientSearch" onkeyup="filterClient()" placeholder="Client Name">
+                        </div>
+                        <div class="col-2">
+                            <select id="productList" class="custom-select col-12" onchange="filterProduct()">
+                                @foreach (var product in Model.Products)
+                                {
+                                    <option>@product.Name</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-2">
+                            <select id="statusList" class="custom-select col-12" onchange="filterStatus()">
+                                <option selected>Status</option>
+                                <option>Open</option>
+                                <option>Inprogress</option>
+                                <option>Close</option>
+                                <option>Solved</option>
+                            </select>
+                        </div>
+                        <div class="col-2">
+                            <select id="priorityList" class="custom-select col-12" onchange="filterPriority()">
+                                <option selected>Priority</option>
+                                <option value="Low">Low</option>
+                                <option value="Medium">Medium</option>
+                                <option value="High">High</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <br />
+                <div class="table-responsive">
+
+                    <table class="table table-con" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Ticket</th>
+                                <th>Client</th>
+                                <th>Product</th>
+                                <th>Subject</th>
+                                <th>Priority</th>
+                                <th>Assigned To</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                                <th>Last Modified</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var ticket in Model.Tickets)
+                            {
+                                <tr>
+                                    <td>
+                                        <a asp-area="" asp-controller="Ticket" asp-action="ManagerView" id="ticketId">@ticket.Id</a>
+                                        @Html.HiddenFor(model => model.TicketId, new { id = ticket.Id })
+                                    </td>
+                                    <td>
+                                        @ticket.ClientName
+                                    </td>
+                                    <td>@ticket.ProductName</td>
+                                    <td>@ticket.Subject</td>
+                                    <td>
+                                        @Html.DropDownList(nameof(ticket.Priority), new SelectList(Enum.GetValues(typeof(Ticketing.Data.Enums.TicketPriority)), ticket.Priority), new { @id = $"{ticket.Id}", @class = "custom-select changeable priority" })
+
+                                    </td>
+                                    <td>
+                                        @if (ticket.StaffMemberName != null)
+                                        {
+                                            @Html.DropDownListFor(model => model.StaffId, new SelectList(Model.Staff, "Id", "Name"), ticket.StaffMemberName, new { @id = $"{ticket.Id}", @class = "custom-select changeable staff" })
+
+                                        }
+                                        else
+                                        {
+                                            @Html.DropDownListFor(model => model.StaffId,
+                                       new SelectList(Model.Staff, "Id", "Name"), "Assign To", new { @id = $"{ticket.Id}", @class = "custom-select changeable staff" })
+
+                                        }
+                                    </td>
+                                    <td>@ticket.Status</td>
+                                    <td>@ticket.CreateDateTime</td>
+                                    <td>@ticket.LastModifiedDateTime</td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                    <div class="container-fluid align-items-center mt-3 mb-5">
+                        <button id="btnSave" class="btn btn-dark">Save Changes</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    @section scripts
+{
+        <script src="~/js/filters.js"></script>
+        <script type="text/javascript">
+
+            var changedData = [];
+
+
+            function addToChanges(id) {
+                changedData = changedData.filter(item => item.Id !== id);
+
+                var staff = $("#" + id + ".staff").val();
+                var priority = $("#" + id + ".priority").val();
+
+                var info = {};
+                info.Id = id;
+                info.AssignedTo = staff;
+                info.Priority = priority;
+                changedData.push(info);
+            }
+
+            function saveChanges() {
+                $.ajax({
+                        url: "@Url.Action("SaveChanges", "Ticket")",
+                        type: "POST",
+                        data: { Changes: changedData},
+                        datatype: "json",
+                        success: function (result) {
+                        alert("Data saved1");
+                        }
+                    });
+            }
+            $(document).ready(function () {
+                $("#btnSave").click(function () {
+                    saveChanges();
+                });
+
+                $('.changeable').on('change', function (e) {
+                    addToChanges($(this).attr('id'))
+                });
+            })
+
+                function filterPriority() {
+                    var filter = $("#priorityList").val().toUpperCase();
+                    $("#dataTable tr").filter(function (r) {
+                        if (filter === "PRIORITY") {
+                            $(this).css("display", "");
+                        } else {
+                            if ($(this).children()[4].querySelector('.priority') != null && $(this).children()[4].querySelector('.priority').value.toUpperCase() !== filter)
+                                $(this).css("display", "none");
+                            else
+                                $(this).css("display", "");
+                        }
+                    });
+            }
+
+            function filterStaff() {
+                var filter = $("#staffList").val().toUpperCase();
+                $("#dataTable tr").filter(function (r) {
+                    if (filter === "STAFF") {
+                        $(this).css("display", "");
+                    } else {
+                        if ($(this).children()[5].querySelector('.staff') != null && $(this).children()[5].querySelector('.staff').value.toUpperCase() !== filter)
+                            $(this).css("display", "none");
+                        else
+                            $(this).css("display", "");
+                    }
+                });
+            }
+
+
+                   function filterStatus() {
+                    var input, filter, table, tr, td, i;
+                    input = document.getElementById("statusList");
+                    filter = input.value.toUpperCase();
+                    table = document.getElementById("dataTable");
+                    tr = table.getElementsByTagName("tr");
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[6];
+                        if (td) {
+                            if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].style.display = "";
+                            }
+                            else if (filter === "STATUS") {
+                                tr[i].style.display = "";
+                            }
+                            else {
+                                tr[i].style.display = "none";
+                            }
+                        }
+                    }
+                }
+
+        </script>
+    }
+</body>

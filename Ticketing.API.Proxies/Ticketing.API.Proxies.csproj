@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Refit.HttpClientFactory" Version="5.1.67" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ticketing.Data.ActionModels\Ticketing.Data.ActionModels.csproj" />
+    <ProjectReference Include="..\Ticketing.Security.Authentication\Ticketing.Security.Authentication.csproj" />
+  </ItemGroup>
+
+</Project>

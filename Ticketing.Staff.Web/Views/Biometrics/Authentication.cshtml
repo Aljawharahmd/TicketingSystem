@@ -1,0 +1,59 @@
+﻿@model BiometricsParameters
+
+@{
+    ViewData["Title"] = "Staff Authentication";
+    Layout = "Layout";
+}
+<body>
+    <div class="contentAuth mt-5">
+        <div class="mt-4 jumb">
+            <h3>Choose your Preferred Authentication Method</h3>
+        </div>
+        @using (Html.BeginForm("Authentication", "Biometrics", FormMethod.Post, new
+        {
+            enctype = "multipart/form-data"
+        }))
+        {
+            @Html.AntiForgeryToken()
+            <div class="row container-fluid mb-5">
+                <div class="col-5">
+                    <div class="card txtLight DetectFace">
+                        <div class="card-body">
+                            <h1>Face Recognition</h1>
+                            @Html.HiddenFor(model => model.Context.Identifier)
+                            @Html.HiddenFor(model => model.Context.Type)
+                            @Html.HiddenFor(model => model.Context.UserId)
+                            @Html.HiddenFor(model => model.Context.RequiredMethods)
+                            <div class="row container-fluid mt-5">
+                                <input type="file" name="Face" accept="image/*" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card txtLight BiometricBG">
+                        <div class="card-body cardNoHover" style="margin-top: 70px; margin-left: 25px;">
+                            <div class="row container-fluid" style=" background-color: #F8AC59">
+                                <button type="submit" class="btn btn-light">Submit</button>
+                            </div>
+                            <div class="row container-fluid mt-4" style=" background-color: #F8AC59">
+                                <button type="reset" class="btn btn-light">&nbsp;Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="card txtLight DetectVoice">
+                        <div class="card-body">
+                            <h1>Voice Recognition</h1>
+                            <div class="row container-fluid mt-5">
+                                <input type="file" name="Voice" accept="audio/*" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</body>
+

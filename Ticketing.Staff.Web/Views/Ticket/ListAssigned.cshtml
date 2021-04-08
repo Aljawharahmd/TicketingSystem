@@ -1,0 +1,144 @@
+﻿@model List<Ticketing.Data.ActionModels.Ticket.Results.TicketViewResult>
+@{
+    ViewData["Title"] = "Tickets";
+    Layout = "StaffLayout";
+}
+<body>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_content">
+            <div class="container-fluid mt-4">
+                <h1 class="mt-2"><strong>Assigned Tickets</strong></h1>
+                <br />
+                <button class="btn btn-dark" data-toggle="collapse" href="#collapse" aria-expanded="false" aria-controls="collapse">
+                    <i class="fas fa-filter"></i> &nbsp; Filter
+                </button>
+                <br />
+                <div class="card collapse mt-3" id="collapse">
+                    <div class="row card-body cardNoHover" style="margin-bottom: -15px">
+                        <div class="input-group mb-4 col-3">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control" id="ticketSearch" onkeyup="filterTicket()" placeholder="Ticket Number">
+                        </div>
+                        <div class="input-group mb-4 col-3">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control" id="clientSearch" onkeyup="filterClient()" placeholder="Client Name">
+                        </div>
+                        <div class="col-2">
+                            <select class="custom-select col-16">
+                                <option selected>Product</option>
+                                <option value="1">Availo</option>
+                                <option value="2">OLE5</option>
+                                <option value="3">Reedoo</option>
+                                <option value="3">RiCH</option>
+                                <option value="3">DOTS</option>
+                            </select>
+                        </div>
+                        <div class="col-2">
+                            <select class="custom-select col-16">
+                                <option selected>Status</option>
+                                <option value="1">Open</option>
+                                <option value="2">In Progress</option>
+                                <option value="3">Closed</option>
+                                <option value="3">Solved</option>
+                            </select>
+                        </div>
+                        <div class="col-2">
+                            <select class="custom-select col-16">
+                                <option selected>Priority</option>
+                                <option value="1">Low</option>
+                                <option value="2">Medium</option>
+                                <option value="3">High</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <br />
+                <div class="table-responsive">
+                    <table class="table table-con" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Ticket Number</th>
+                                <th>Client Name</th>
+                                <th>Product</th>
+                                <th>Subject</th>
+                                <th>Priority</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                                <th>Last Modified</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var ticket in Model)
+                            {
+                                <tr>
+                                    <td>@Html.ActionLink($"{ticket.Id}", "StaffView", new { Id = ticket.Id })</td>
+                                    <td>@ticket.ClientName</td>
+                                    <td>@ticket.ProductName</td>
+                                    <td>@ticket.Subject</td>
+                                    <td>@ticket.Priority</td>
+                                    <td>@ticket.Status</td>
+                                    <td>@ticket.CreateDateTime</td>
+                                    <td>@ticket.CreateDateTime</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function filterTicket() {
+            // Declare variables
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("ticketSearch");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("dataTable");
+            tr = table.getElementsByTagName("tr");
+
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+        function filterClient() {
+            // Declare variables
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("clientSearch");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("dataTable");
+            tr = table.getElementsByTagName("tr");
+
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[4];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>

@@ -1,0 +1,211 @@
+﻿@model TicketRepliesParameters
+@{
+    ViewData["Title"] = "StaffView Ticket";
+    Layout = "StaffLayout";
+}
+<body>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_content">
+            <div class="container-fluid">
+                <div class="row mt-4">
+                    <div class="col-1 mt-4 pl-5 linkHover">
+                        <a asp-area="" asp-controller="Ticket" asp-action="ListAssigned">
+                            <i class="fas fa-arrow-circle-left txtDark" style="font-size: 40px;"></i>
+                        </a>
+                    </div>
+                    <div class="col-11">
+                        <div class="container-fluid">
+
+                            <h3 class="mt-4">
+                                <strong> Ticket Details </strong>
+                            </h3>
+                            <br />
+
+                            <h4>Client Information</h4>
+                            <div class="container-fluid">
+                                <table class="table table-borderless">
+                                    <tbody>
+                                        @using (Html.BeginForm("CloseTicket", "Ticket", FormMethod.Post))
+                                        {
+                                            <tr>
+                                                <th scope="row">Client ID</th>
+                                                <td>@Model.Ticket.ClientId</td>
+                                            </tr>
+                                        }
+                                        <tr>
+                                            <th scope="row">Client Name</th>
+                                            <td>@Model.Ticket.ClientName</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Client Email</th>
+                                            <td>@Model.Ticket.ClientEmail</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <hr />
+                                <div class="row">
+                                    <div class="col-8">
+                                        <table class="table table-borderless">
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">Subject</th>
+                                                    <td>@Model.Ticket.Subject</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Product</th>
+                                                    <td>@Model.Ticket.ProductName</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Priority</th>
+                                                    <td>@Model.Ticket.Priority</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Summary</th>
+                                                    <td colspan="2">
+                                                        @Model.Ticket.Summary
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Attachment</th>
+                                                    <td>
+                                                        @if (@Model.Ticket.Files.Any())
+                                                        {
+                                                            foreach (var file in @Model.Ticket.Files)
+                                                            {
+                                                                <h5 class="linkColor">
+                                                                    <a href=@file.DonwloadPath> @file.Name@file.Extension </a>
+                                                                </h5>
+                                                            }
+
+                                                        }
+                                                        else
+                                                        {
+                                                            <p>No Attachments</p>
+
+                                                        }
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <hr />
+                                <div class="row">
+                                    <div class="col-11">
+                                        <div class="card mb-3" style="background-color: rgba(255, 255, 255, 0)">
+                                            <div class="card-body cardNoHover">
+                                                <table class="table table-borderless">
+                                                    <tbody>
+                                                        <replies>
+                                                            @if (Model.Replies.Any())
+                                                            {
+                                                                @foreach (var reply in Model.Replies)
+                                                                {
+                                                                    @if (reply.SenderType.ToString() == "StaffMember")//staff
+                                                                    {
+                                                                        <tr style="background-color: rgba(248, 172, 89, 0.25);">
+                                                                            <th scope="row">@reply.StaffMemberName</th>
+                                                                            <td colspan="2">
+                                                                                @reply.Content
+                                                                                <span style="text-align: right; color: gray ;font-size:8px">
+                                                                                    @reply.CreateDateTime
+                                                                                </span>
+                                                                            </td>
+                                                                            @if (reply.Files.Any())
+                                                                            {
+                                                                                foreach (var file in reply.Files)
+                                                                                {
+                                                                                    <td class="linkColor">
+                                                                                        <a href=@file.DonwloadPath> @file.Name@file.Extension  </a>
+                                                                                    </td>
+                                                                                }
+
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                <td>
+                                                                                    No Attachment
+                                                                                </td>
+                                                                            }
+
+
+                                                                        </tr>
+                                                                    }
+                                                                    else//client
+                                                                    {
+                                                                        <tr>
+                                                                            <th scope="row">@reply.ClientName</th>
+                                                                            <td colspan="2">
+                                                                                @reply.Content
+                                                                                <span style="text-align: right; color: gray ;font-size:8px">
+                                                                                    @reply.CreateDateTime
+                                                                                </span>
+                                                                            </td>
+                                                                            @if (reply.Files.Any())
+                                                                            {
+                                                                                foreach (var file in reply.Files)
+                                                                                {
+                                                                                    <td class="linkColor">
+                                                                                        <a href=@file.DonwloadPath> @file.Name@file.Extension  </a>
+                                                                                    </td>
+                                                                                }
+
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                <td>
+                                                                                    No Attachment
+                                                                                </td>
+                                                                            }
+
+                                                                        </tr>
+                                                                    }
+                                                                }
+                                                            }
+                                                            else
+                                                            {
+                                                                <tr>
+                                                                    <td colspan="2">
+                                                                        You don't have any replies.
+                                                                        <span style="text-align: right; color: gray">
+                                                                        </span>
+                                                                    </td>
+                                                                </tr>
+                                                            }
+                                                        </replies>
+                                                        <tr>
+                                                            <th scope="row">Reply</th>
+                                                            <td>
+                                                                @using (Html.BeginForm("StaffView", "Ticket", FormMethod.Post, new
+                                                                {
+                                                                    enctype = "multipart/form-data"
+                                                                }))
+                                                                {
+                                                                    @Html.AntiForgeryToken()
+
+                                                                    @Html.HiddenFor(model => model.Ticket.ClientId)
+                                                                    @Html.HiddenFor(model => model.Ticket.StaffMemberId)
+                                                                    @Html.TextAreaFor(model => model.Reply.Content, htmlAttributes: new { @class = "form-control" })
+                                                                    <br />
+                                                                    <button class="btn btn-dark" type="submit" asp-controller="Ticket" asp-action="StaffView"> @Html.ActionLink("", "StaffView", new { id = Model.Ticket.Id }) Send</button>
+                                                                    <input type="file" name="Attachments" multiple="multiple" accept="image/*" />
+
+                                                                }
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

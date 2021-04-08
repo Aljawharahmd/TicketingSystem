@@ -1,0 +1,95 @@
+﻿@model TicketRepliesParameters
+
+@{
+    ViewData["Title"] = "ManagerView Ticket";
+    Layout = "ManagerLayout";
+}
+<body>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_content">
+            <div class="container-fluid">
+                <div class="row mt-4">
+                    <div class="col-1 mt-4 pl-5 linkHover">
+                        <a asp-area="" asp-controller="Ticket" asp-action="List">
+                            <i class="fas fa-arrow-circle-left txtDark" style="font-size: 40px;"></i>
+                        </a>
+                    </div>
+                    <div class="col-11">
+                        <div class="container-fluid">
+                            <h3 class="mt-4">
+                                <strong> Ticket Details </strong>
+                            </h3>
+                            <br />
+                            <h5><strong>Client Information</strong> </h5>
+
+                            <table class="table table-borderless">
+                                <tbody class="border">
+
+                                    <tr>
+                                        <th scope="row">Client ID</th>
+                                        <td>@Model.Ticket.ClientId</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Client Name</th>
+                                        <td>@Model.Ticket.ClientName</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Client Email</th>
+                                        <td>@Model.Ticket.ClientEmail</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            <hr />
+                          
+                                    <br />
+
+                                    <h5><strong>Ticket Information</strong> </h5>
+                                    <table class="table table-borderless">
+                                        <tbody class="border-bottom border-top border-right border-left">
+                                            <tr>
+                                                <th>Subject</th>
+
+                                                <td colspan="">@Model.Ticket.Subject</td>
+                                                <th>Assigned To</th>
+                                                <td colspan="4">@Model.Ticket.StaffMemberName</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Product</th>
+                                                <td>@Model.Ticket.ProductName</td>
+
+                                                <th>Priority</th>
+                                                <td>@Model.Ticket.Priority</td>
+
+                                                <th>&nbsp;</th>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Date</th>
+                                                <td>@Model.Ticket.CreateDateTime</td>
+
+                                                <th>Last Modified</th>
+                                                <td>@Model.Ticket.LastModifiedDateTime</td>
+
+                                                <th>Status</th>
+                                                <td>@Model.Ticket.Status</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table border">
+                                        <tbody>
+                                            <tr>
+                                                <th>Summary</th>
+                                                <td colspan="6">
+                                                    @Model.Ticket.Summary
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</body>

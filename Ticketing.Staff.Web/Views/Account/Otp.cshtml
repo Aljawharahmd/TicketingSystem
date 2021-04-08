@@ -1,0 +1,47 @@
+﻿@model OtpParameters
+@{
+    ViewData["Title"] = "OTP";
+    Layout = "Layout";
+}
+<body>
+
+    @{
+        var userId = ViewBag.userId;
+    }
+<div class="content mt-3">
+    <div class="row container-fluid">
+        <div class="col-4">
+
+        </div>
+        <div class="col-5 lform">
+
+            <form class="llform txtLight" method="post">
+
+                <div id="" class="form-group justify-content-center pt-5">
+                    <div><h1><strong>One Time Password</strong></h1></div>
+                </div>
+                <br />
+                <div id="" class="form-group justify-content-center">
+                    <label for="otp">Code</label>
+                    <div id="" class="form-inline mb-5">
+                        @Html.TextBoxFor(model => model.FirstNumber, htmlAttributes: new { id = "FirstNumber", @class = "form-control inputs col-1 mr-3", maxlength = "1", pattern = "[0-9]", required = "true" })
+                        @Html.TextBoxFor(model => model.SecondNumber, htmlAttributes: new { id = "SecondNumber", @class = "form-control inputs col-1 mr-3", maxlength = "1", pattern = "[0-9]", required = "true" })
+                        @Html.TextBoxFor(model => model.ThirdNumber, htmlAttributes: new { id = "ThirdNumber", @class = "form-control inputs col-1 mr-3", maxlength = "1", pattern = "[0-9]", required = "true" })
+                        @Html.TextBoxFor(model => model.FourthNumber, htmlAttributes: new { id = "FourthNumber", @class = "form-control inputs col-1 mr-3", maxlength = "1", pattern = "[0-9]", required = "true" })
+                        @Html.HiddenFor(model => model.UserId)
+                        @Html.HiddenFor(model => model.Email)
+
+
+                    </div>
+                    <button type="submit" class="btn btn-dark" asp-controller="Account" asp-action="Otp"> Submit</button>
+                    <button type="reset" class="btn btn-dark">Clear</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="~/js/nextFieldFocus.js"></script>
+
+</body>
+

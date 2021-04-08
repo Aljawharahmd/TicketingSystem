@@ -1,0 +1,160 @@
+﻿@model List<Ticketing.Data.ActionModels.StaffMember.Results.StaffMemberViewResult>
+@{
+    ViewData["Title"] = "Staff";
+    Layout = "ManagerLayout";
+}
+<body>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_content">
+            <div class="container-fluid">
+                <h1 class="mt-4"><strong>Support Staff</strong></h1>
+                <br />
+                <button class="btn btn-dark" data-toggle="collapse" href="#collapse" aria-expanded="false" aria-controls="collapse">
+                    <i class="fas fa-filter"></i> &nbsp; Filter
+                </button>
+                <br />
+                <div class="card collapse mt-3" id="collapse">
+                    <div class="row card-body cardNoHover"  style="margin-bottom: -20px">
+                        <div class="col-3">
+                            <div class="input-group mb-3 col-12">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control"  id="numberSearch" onkeyup="filterNumber()" placeholder="Staff Number">
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="input-group mb-3 col-12">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" id="mobileSearch" onkeyup="filterMobile()" placeholder="Mobile Number">
+                            </div>
+                        </div>
+                        @*<div class="col-3">
+                            <div class="col-12">
+                                <select class="custom-select">
+                                    <option selected>Status</option>
+                                    <option value="1">Active</option>
+                                    <option value="2">Inactive</option>
+                                </select>
+                            </div>
+                        </div>*@
+                    </div>
+                </div>
+                <hr />
+                <div class="table-responsive">
+                    <table class="table table-con" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Number</th>
+                                <th>Name</th>
+                                <th>Mobile Number</th>
+                                <th>Email</th>
+                                <th>Birth Date</th>
+                                <th>Status</th>
+                                <th>Activate</th>
+                                <th>Deactivate</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var staffMember in Model)
+                            {
+                            <tr>
+                                <td>@staffMember.Id</td>
+                                <td>@staffMember.Name</td>
+                                <td>@staffMember.MobileNumber</td>
+                                <td>@staffMember.Email</td>
+                                <td>@staffMember.BirthDate</td>
+                                <td>@staffMember.Status</td>
+                                <td>
+                                    @if (staffMember.Status.ToString() == "Active")
+                                    {
+                                        <a class="nav-link">
+                                            <i class="fas fa-check-circle activate-disabled"></i>
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <a class="nav-link" href="Activate/@staffMember.Id">
+                                            <i class="fas fa-check-circle activate-fa"></i>
+                                        </a>
+                                    }
+
+                                </td>
+                                <td>
+                                    @if (staffMember.Status.ToString() == "Deactive")
+                                    {
+                                        <a class="nav-link">
+                                            <i class="fas fa-times-circle deactivate-disabled "></i>
+
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <a class="nav-link" href="Deactivate/@staffMember.Id">
+                                            <i class="fas fa-times-circle deactivate-fa "></i>
+
+                                        </a>
+                                    }
+
+                                </td>
+                            </tr>
+                            }
+                             
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function filterNumber() {
+            // Declare variables
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("numberSearch");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("dataTable");
+            tr = table.getElementsByTagName("tr");
+
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+        function filterMobile() {
+            // Declare variables
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("mobileSearch");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("dataTable");
+            tr = table.getElementsByTagName("tr");
+
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[2];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
